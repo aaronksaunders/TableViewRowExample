@@ -1,11 +1,6 @@
-var stocks = Alloy.Collections.Stock;
+
+var stocks = Alloy.Collections.Stock = Alloy.createCollection("stock");
 
 stocks.fetch();
 
-$.index.open();
-
-$.tableView.addEventListener('click', function(e) {
-	
-	alert(JSON.stringify(e.rowData));
-});
-
+Alloy.createController("stocks")
