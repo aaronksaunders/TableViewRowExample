@@ -22,6 +22,7 @@ exports.definition = {
                     "id" : attributes['idAttribute'] || guid()
                 });
             },
+            // extended functions go here
 
         });
         // end extend
