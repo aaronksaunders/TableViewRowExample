@@ -1,0 +1,7 @@
+TableViewRow: {
+	layout: 'horizontal'
+},
+
+Label: {
+	right: 10
+}

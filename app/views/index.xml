@@ -1,0 +1,14 @@
+<Alloy>
+    
+    <Collection src="Stock"/>
+    
+	<Window class="container">
+
+	    <TableView id="tableView" dataCollection="Stock">
+
+	        <Require src="row"/>
+	        
+	    </TableView>
+
+	</Window>
+</Alloy>
