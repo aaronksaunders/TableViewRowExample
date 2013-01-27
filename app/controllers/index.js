@@ -6,6 +6,10 @@ $.index.open();
 
 $.tableView.addEventListener('click', function(e) {
 	
-	alert(JSON.stringify(e.rowData));
+	var id = e.rowData.model;
+	
+	var stock = stocks.get(id);
+	
+	alert(JSON.stringify(stock));
 });
 

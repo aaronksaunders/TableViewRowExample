@@ -17,8 +17,12 @@ exports.definition = {
     extendModel: function(Model) {      
         _.extend(Model.prototype, {
  
-            // extended functions go here
- 
+            initialize : function(attributes) {
+                this.set({
+                    "id" : attributes['idAttribute'] || guid()
+                });
+            },
+             
         }); // end extend
  
         return Model;
@@ -35,4 +39,14 @@ exports.definition = {
         return Collection;
     }
  
+}
+
+
+ 
+function S4() {
+    return ((1 + Math.random()) * 65536 | 0).toString(16).substring(1);
+}
+ 
+function guid() {
+    return S4() + S4() + "-" + S4() + "-" + S4() + "-" + S4() + "-" + S4() + S4() + S4();
 }
